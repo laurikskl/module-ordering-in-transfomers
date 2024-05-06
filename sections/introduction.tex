@@ -1,12 +1,14 @@
 \section{Introduction}
 \begin{itemize}
-\item Introduce the topic and explain why it is important (motivation!). %\emph{How should a scientific paper look like?}
+\item Introduce the topic and explain why it is important (motivation!). ?
+\emph{How should a scientific paper look like?}
 
 \item Relate to the most relevant existing work from the literature (use BibTeX), explain their contributions, and (critically) indicate what is still unanswered. 
-%\emph{The existing state of the art describes the setup of general scientific papers, e.g.\ see~\cite{hengl2002rules}, but this may be different for computer science papers.}
+\emph{The existing state of the art describes the setup of general scientific papers, e.g.\ see~\cite{hengl2002rules}, but this may be different for computer science papers.}
 
 \item Explain what the research questions for this work are. 
-This usually is a subset of the unanswered questions. %\emph{The aim of this work is therefore to provide a good template specifically for papers in the field of computer science.}
+This usually is a subset of the unanswered questions. 
+\emph{The aim of this work is therefore to provide a good template specifically for papers in the field of computer science.}
 
 \item Summarize the main contributions/conclusions of this research.
 NB: Make sure the title of the paper is a good match to the main research question / contribution / conclusion.
@@ -17,3 +19,32 @@ NB: Make sure the title of the paper is a good match to the main research questi
 For a longer research paper, a section with a more elaborate discussion of the literature may follow, but for short (conference) submissions, this is often included in the introduction.
 
 Make sure the introduction and conclusion are easily understandable by everyone with a computer science bachelor (e.g.\ your examiner may have a completely different expertise).
+
+% \section{Introduction}
+
+Transformers have revolutionized natural language processing, yet they grapple with limitations due to fixed-size context windows,
+ restricting their capacity to process lengthy documents and grasp intricate dependencies outside these windows.
+  Enhanced models such as Transformer-XL and BigBird have addressed these issues through sparse attention mechanisms and cacheing Key-Value matrices,
+   yet challenges persist in terms of scalability and computational efficiency. 
+
+In response to these ongoing challenges, Munkhdalai et al. introduced the concept of Infini-attention, an innovative approach allowing efficient management
+ of infinitely long contexts (\textit{Leave No Context Behind: Efficient Infinite Context Transformers with Infini-attention}).
+  Infini-attention integrates a compressive memory into the transformer architecture, allowing for a dynamic and scalable handling
+   of extended contexts without a proportional increase in computational demands. This mechanism not only enhances memory efficiency
+    but also fosters continuous contextual understanding over extended sequences.
+
+While Infini-attention has demonstrated promising results in fine-tuning scenarios, this study proposes to explore its integration at an
+ earlier stage—during model pre-training. This approach hypothesizes that initiating Infini-attention in the pre-training phase could
+  leverage its full potential, thereby embedding a deeper contextual understanding from the outset. Specifically,
+   this research seeks to (1) evaluate the impact of Infini-attention when introduced in pre-training versus during fine-tuning, 
+   and (2) examine the relationship between the context length a transformer can handle and the capacity of its compressive infini-attention memory.
+
+The insights gained from this study could significantly influence future strategies for deploying transformer models across various real-world applications,
+
+ Furthermore, this research will also shed light on the extent to which the compressive memory component of Infini-attention can compensate for shorter local context lengths. 
+ By determining how effectively compressive memory can stand in for direct local context interactions, the findings may offer valuable guidelines for
+  optimizing transformer configurations, particularly in applications where extending the context window is constrained by computational or memory resources.
+  This would potentially lead to more robust, context-aware systems capable of handling complex tasks such as document summarization and legal analysis more effectively.
+
+
+\end{document}
