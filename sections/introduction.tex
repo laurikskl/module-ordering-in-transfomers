@@ -1,26 +1,16 @@
 \section{Introduction}
-\begin{itemize}
-\item Introduce the topic and explain why it is important (motivation!). ?
-\emph{How should a scientific paper look like?}
+% **The Problem**
+% - LLMs are really nice to use for summarizing long texts or giving them documentation that they have not been trained on
+% - Increasing context length makes the costs scale quadratically
+% - Infini-attention promises infinite context length for a finite cost.
+% - They propose a compressive memory,  but can it really hold infinite information?
 
-\item Relate to the most relevant existing work from the literature (use BibTeX), explain their contributions, and (critically) indicate what is still unanswered. 
-\emph{The existing state of the art describes the setup of general scientific papers, e.g.\ see~\cite{hengl2002rules}, but this may be different for computer science papers.}
+% **Existing Approaches**
+% - They do benchmarks like needle in a haystack 
+% - they find a compressive ratio of 114x
 
-\item Explain what the research questions for this work are. 
-This usually is a subset of the unanswered questions. 
-\emph{The aim of this work is therefore to provide a good template specifically for papers in the field of computer science.}
-
-\item Summarize the main contributions/conclusions of this research.
-NB: Make sure the title of the paper is a good match to the main research question / contribution / conclusion.
-
-\item Briefly indicate how the rest of the paper fits together to answer the research question(s).
-\end{itemize}
-
-For a longer research paper, a section with a more elaborate discussion of the literature may follow, but for short (conference) submissions, this is often included in the introduction.
-
-Make sure the introduction and conclusion are easily understandable by everyone with a computer science bachelor (e.g.\ your examiner may have a completely different expertise).
-
-% \section{Introduction}
+% **The Gap**
+% - How does the compressive memory scale depending on its size?
 
 Transformers have revolutionized natural language processing, yet they grapple with limitations due to fixed-size context windows,
  restricting their capacity to process lengthy documents and grasp intricate dependencies outside these windows.
@@ -28,7 +18,7 @@ Transformers have revolutionized natural language processing, yet they grapple w
    yet challenges persist in terms of scalability and computational efficiency. 
 
 In response to these ongoing challenges, Munkhdalai et al. introduced the concept of Infini-attention, an innovative approach allowing efficient management
- of infinitely long contexts (\textit{Leave No Context Behind: Efficient Infinite Context Transformers with Infini-attention}).
+ of infinitely long contexts \cite{munkhdalai_leave_2024}.
   Infini-attention integrates a compressive memory into the transformer architecture, allowing for a dynamic and scalable handling
    of extended contexts without a proportional increase in computational demands. This mechanism not only enhances memory efficiency
     but also fosters continuous contextual understanding over extended sequences.
